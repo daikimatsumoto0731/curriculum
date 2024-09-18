@@ -1,0 +1,28 @@
+問１
+答え：Switch３
+
+問２
+答え：
+ルートポートの説明：各Switch間のショートパスコストは、
+                Switch１ーSwitch３は100
+                Switch１ーSwitch２は19
+                Switch２ーSwitch４は100
+                Switch３ーSwitch４は100
+        ルートブリッジはSwitch３であることから、それぞれのルートポートをショートパスコストを使って値の小さいルート求めると、
+                Switch１はSwitch１ーSwitch３は100を使うのでSwitch１のF0/2 の部分がRP
+                Switch２はSwitch２ーSwitch１ーSwitch３を使うのでF0/1 がRP
+                Switch４はSwitch３ーSwitch４を使うのでE0/2 がRPになる。
+
+指定ポートの説明：まず、ルートブリッジの全てのポートは必ず指定ポートになるので
+                Switch３の全てのポートはDP
+
+                ルートブリッジの向かいのポートは必ず指定ポートになるので、
+                Switch２のF0/2 がDP
+
+                各コリジョンドメインごとに1つ指定ポートが存在してないといけないので、
+                Switch１ーSwitch２間にDPが無くSwitch２のF0/1 はすでにRPに選出されているので
+                Switch１のF0/1 がRPになる。
+
+ブロッキングポートの説明：ルートポート、指定ポートに選出されていないのはSwitch４のE0/1 なので、
+                Switch４のE0/1 がBPとなる。
+
