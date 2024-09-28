@@ -1,0 +1,8 @@
+(1)MACアドレス：AAAA.AAAA.AAAA
+答え：インターフェースID：A8 AA AA FF FE AA　AA AA
+
+(2)MACアドレス：9876.5432.10FE
+答え：インターフェースID：9A 76 54 FF FE 32 10 FE
+
+(3)MACアドレス：FFFF.FFFF.FFFF
+答え：インターフェースID：FD FF FF FF FE FF FF FF
